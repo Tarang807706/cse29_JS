@@ -31,7 +31,7 @@ console.log(a-b-c);
 
 
 ///////////////////
-var a = 10;
+var a = 20;
 var b= 20;
 console.log("(a==b)=>")
 result=( a==b);
