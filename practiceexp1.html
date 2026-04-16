@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Experiment 2</title>
+<style>
+body{
+font-family: Arial;
+background:#f2f2f2;
+text-align:center;
+}
+
+.container{
+background:white;
+width:400px;
+margin:auto;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+
+input{
+padding:8px;
+margin:5px;
+width:80%;
+}
+
+button{
+padding:8px 15px;
+margin:5px;
+background:blue;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+#output{
+margin-top:20px;
+text-align:left;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Employee Management System</h1>
+
+<div class="container">
+
+<input type="text" id="name" placeholder="Employee Name">
+<input type="text" id="id" placeholder="Employee ID">
+<input type="number" id="salary" placeholder="Salary">
+<input type="text" id="dept" placeholder="Department">
+
+<button onclick="addEmployee()">Add Employee</button>
+
+<hr>
+
+<button onclick="displayEmployees()">Display Employees</button>
+<button onclick="filterSalary()">Salary > 50000</button>
+<button onclick="totalSalary()">Total Salary</button>
+<button onclick="averageSalary()">Average Salary</button>
+<button onclick="countDepartment()">Count by Department</button>
+
+<div id="output"></div>
+
+</div>
+
+<script src="exp2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 3 - DOM Manipulation</title>
+
+    <style>
+        body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    .container {
+        margin-top: 80px;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        padding: 30px;
+        border-radius: 20px;
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+    input {
+        width: 90%;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-top: 10px;
+        outline: none;
+    }
+
+    button {
+        margin: 8px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: #ffffff;
+        color: #333;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        background: #ffd369;
+    }
+
+    .footer {
+        margin-top: 20px;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 id="heading">Welcome to My Webpage</h1>
+
+    <p id="para">This is a sample paragraph for DOM manipulation.</p>
+
+    <input type="text" id="inputText" placeholder="Enter new heading">
+
+    <br>
+
+    <button onclick="changeText()">Change Heading</button>
+    <button onclick="changeColor()">Change Background</button>
+    <button onclick="increaseFont()">Increase Font Size</button>
+    <button onclick="decreaseFont()">Decrease Font Size</button>
+    <button onclick="togglePara()">Show/Hide Paragraph</button>
+
+</div>
+
+<p>Heyy this is my webpage 😎</p>
+
+<script>
+    let fontSize = 18;
+
+    function changeText() {
+        let text = document.getElementById("inputText").value;
+        if (text.trim() !== "") {
+            document.getElementById("heading").innerText = text;
+        }
+    }
+
+    function changeColor() {
+    let randomColor1 = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    let randomColor2 = "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+    document.body.style.background = `linear-gradient(135deg, ${randomColor1}, ${randomColor2})`;
+}
+    
+
+    function increaseFont() {
+        fontSize += 2;
+        document.getElementById("para").style.fontSize = fontSize + "px";
+    }
+
+    function decreaseFont() {
+        if (fontSize > 10) {
+            fontSize -= 2;
+            document.getElementById("para").style.fontSize = fontSize + "px";
+        }
+    }
+
+    function togglePara() {
+        let p = document.getElementById("para");
+        p.style.display = (p.style.display === "none") ? "block" : "none";
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+ 

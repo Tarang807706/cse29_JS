@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 3 - DOM Manipulation</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: wheat;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 8px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1 id="heading">Welcome to My Webpage</h1>
+
+    <p id="para">This is a sample paragraph for DOM manipulation.</p>
+
+    <input type="text" id="inputText" placeholder="Enter new heading">
+
+    <br>
+
+    <button onclick="changeText()">Change Heading</button>
+    <button onclick="changeColor()">Change Background</button>
+    <button onclick="increaseFont()">Increase Font Size</button>
+    <button onclick="togglePara()">Show/Hide Paragraph</button>
+</div>
+<p>heyy this is my webpage </p>
+    <script>
+        let fontSize = 16;
+
+        function changeText() {
+            let text = document.getElementById("inputText").value;
+            document.getElementById("heading").innerHTML = text;
+        }
+
+        function changeColor() {
+            document.body.style.backgroundColor = "#"+math.floor(math.random()*166777215).tostring(16);
+        }
+
+        function increaseFont() {
+            fontSize += 2;
+            document.getElementById("fontsizeBin").addEventListener("click").function()
+            {
+                fontsize+=2;
+                paragraph.style.fontsize=fontsize+"px";
+            }
+        }
+
+        function togglePara() {
+            let p = document.getElementById("para");
+            if (p.style.display === "none") {
+                p.style.display = "block";
+            } else {
+                p.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
